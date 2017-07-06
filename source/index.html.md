@@ -58,7 +58,6 @@ curl --include --header "X-Access-Token: YOUR_API_TOKEN_HERE" "http://api.travel
 ```ruby
 require 'rubygems' if RUBY_VERSION < '1.9'
 require 'rest_client'
-
 headers  = {:x_access_token => "YOUR_API_TOKEN_HERE"}
 response = RestClient.get "http://api.travelpayouts.com/v2/prices/latest?currency=rub&period_type=year&page=1&limit=30&show_to_affiliates=true&sorting=price&trip_class=0", headers
 puts response
@@ -72,7 +71,6 @@ curl_setopt($ch, CURLOPT_HEADER, FALSE);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array("X-Access-Token: YOUR_API_TOKEN_HERE"));
 $response = curl_exec($ch);
 curl_close($ch);
-
 var_dump($response);
 ```
 
